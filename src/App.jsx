@@ -37,10 +37,19 @@ const tweetsArray = [
   },
 ];
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-      <Tweet />
+      {/* Rendering the first tweet dynamically */}
+      {/* <Tweet tweet={tweetsArray[0]} />
+      <Tweet tweet={tweetsArray[1]} />
+      <Tweet tweet={tweetsArray[2]} /> */}
+
+      
+      {tweetsArray.map((tweet) => (
+        <Tweet tweet={tweet} />
+      ))}
+      }
     </div>
   );
 }
